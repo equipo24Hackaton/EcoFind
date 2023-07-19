@@ -1,11 +1,11 @@
 import React from 'react'
-
+import Aceiterosa from '../assets/aceiterosa.jpg'
 import { IoPersonOutline, IoCartOutline,IoHeartOutline} from 'react-icons/io5';
-
+import './Tarjeta.css'
 const Tarjeta = () => {
   return (
     <div className='containerTarjeta'>
-        <img className='imgTarjeta' src='https://via.placeholder.com/150?text=Imagen+de+prueba' alt='Imagentarjeta'></img>
+        <img src={Aceiterosa} alt='imagen aceite de rosa'/>
         <div className='botonesTarjeta'>
             <button className='prodName'>PRODUCT NAME</button>
             <div className='botonesTarjeta2'>

@@ -1,0 +1,51 @@
+
+@media (max-width: 768px){ 
+.tarjetas{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+  }
+  
+  .containerTarjeta{
+    margin-top: 20px;
+    width: 50%;
+    height: 30vh;
+    border-radius: 10px;
+    background-color: rgb(3, 226, 226);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+  .imgTarjeta{
+    width: 90%;
+    height: 50%;
+    border-radius: 10px;
+  }
+  
+  .botonesTarjeta{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .prodName{
+    width: 90;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+  }
+  .botonesTarjeta2{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-around;
+    
+  }
+  .price{
+    width: 130px;
+    border-radius: 10px;
+    border: none;
+    margin-right: 5px;
+  }
+
+}

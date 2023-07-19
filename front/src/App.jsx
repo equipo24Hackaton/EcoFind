@@ -1,10 +1,10 @@
-import { useState } from 'react'
+
 
 import './App.css'
-import Header from './components/Header'
+import Header from './components/Header/Header'
 import Banner from './components/Banner'
 import Categoria from './components/Categoria'
-import Tarjeta from './components/Tarjeta'
+import Tarjeta from './Tarjeta/Tarjeta'
 
 
 
@@ -20,14 +20,6 @@ function App() {
       
       <Header/>
       <Banner/>
-
-      <h2 style={{textAlign:'center'}}>CATEGORIAS</h2>
-      <div className='categorias'>
-        <Categoria/>
-        <Categoria/>
-        <Categoria/>
-        <Categoria/>
-      </div>
 
       <div className='tarjetas'>
       <Tarjeta/>

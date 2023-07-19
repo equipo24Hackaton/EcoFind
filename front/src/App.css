@@ -1,30 +1,10 @@
-*{
+/* *{
   
   font-family: 'Space Grotesk' , sans-serif;
-}
+} */
 
-/* HEADER */
-.header {
-  display: flex;
-  padding: 10px;
-  justify-content: space-around;
-  align-items: center; /* Centra verticalmente los elementos */
-  flex-wrap: wrap; /* Permite que los elementos se colapsen en varias filas */
-}
 
-.userLogin {
-  display: flex;
-  align-items: center; /* Centra verticalmente el texto del botón */
-  height: 40px;
-  padding:  10px; /* Ajusta el espaciado interno del botón */
-  border-radius: 10px;
-  border: none;
-  font-weight: bold;
-  background-color: #dcdcdc;
-  color: #000000;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+
 
 .icons {
   display: flex;
@@ -39,7 +19,7 @@
   background-color: #dcdcdc;
   border-radius: 5px;
 }
-.icono{
+.notificacion{
   width: 20px;
   height: 20px;
   background-color: red;
@@ -58,11 +38,7 @@
 }
 
 /* Media Query para hacer el header responsive */
-@media (max-width: 768px) {
-  .header {
-    flex-direction: row; /* Coloca los elementos uno debajo del otro */
-    
-  }
+
 
   .userLogin {
     width: 100%; /* Ocupa todo el ancho disponible */
@@ -73,7 +49,7 @@
   .icons {
     justify-content: center; /* Centra los iconos en la versión móvil */
   }
-}
+
 
 /* FIN HEADER */
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaHeart, FaSearch } from 'react-icons/fa';
 import { IoPersonOutline, IoCartOutline } from 'react-icons/io5'; // Utiliza 'react-icons/io' en lugar de 'react-icons/io5'
-
+import './Header.css'
 const Header = () => {
   return (
     <div className="header">
@@ -17,9 +17,10 @@ const Header = () => {
         </button>
       </div>
       <div className="icons">
+      <div className='notification'>1</div>
+        <IoNotificationsOutline className='icon' size={24} />
         {/* Icono de carrito de compras */}
         <IoCartOutline className='icon' size={24} strokeWidth={2} stroke='black' />
-        <div className='icono'>1</div>
         {/* Icono de lupa de buscador */}
         <FaSearch className='icon' size={24} />
       </div>
