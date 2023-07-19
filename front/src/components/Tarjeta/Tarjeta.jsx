@@ -1,5 +1,5 @@
 import React from 'react'
-import Aceiterosa from '../assets/aceiterosa.jpg'
+import Aceiterosa from '../../assets/images/aceiterosa.jpg'
 import { IoPersonOutline, IoCartOutline,IoHeartOutline} from 'react-icons/io5';
 import './Tarjeta.css'
 const Tarjeta = () => {

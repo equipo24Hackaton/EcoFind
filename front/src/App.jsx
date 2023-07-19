@@ -2,9 +2,8 @@
 
 import './App.css'
 import Header from './components/Header/Header'
-import Banner from './components/Banner'
-import Categoria from './components/Categoria'
-import Tarjeta from './components/Tarjeta'
+import Banner from './components/Banner/Banner'
+import Tarjeta from './components/Tarjeta/Tarjeta'
 import Footer from './components/Footer/Footer'
 
 
