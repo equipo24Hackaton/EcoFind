@@ -2,6 +2,7 @@ import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import product from '../../data/product.json';
 import { CreateProductDto } from './dto/create-product.dto';
 import { Product } from './entities/product.entity';
+import { UpdateProductDto } from './dto/update-product.dto';
 
 @Injectable()
 export class ProductsService {
@@ -37,23 +38,20 @@ export class ProductsService {
     this.product.push(newProduct);
     return this.product.find((e) => e._id === id);
   }
-  // create(createProductDto: CreateProductDto) {
-  //   return 'This action adds a new product';
-  // }
 
   findAll() {
     return product;
   }
 
-  // findOne(id: number) {
-  //   return `This action returns a #${id} product`;
-  // }
+  findOne(id: string) {
+    return product.find((element) => element._id === id);
+  }
 
-  // update(id: number, updateProductDto: UpdateProductDto) {
-  //   return `This action updates a #${id} product`;
-  // }
+  update(id: string, updateProductDto: UpdateProductDto) {
+    return `This action updates a #${id} product`;
+  }
 
-  // remove(id: number) {
-  //   return `This action removes a #${id} product`;
-  // }
+  remove(id: string) {
+    return `This action removes a #${id} product`;
+  }
 }
