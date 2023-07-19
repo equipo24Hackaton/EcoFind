@@ -4,7 +4,8 @@ import './App.css'
 import Header from './components/Header/Header'
 import Banner from './components/Banner'
 import Categoria from './components/Categoria'
-import Tarjeta from './Tarjeta/Tarjeta'
+import Tarjeta from './components/Tarjeta'
+import Footer from './components/Footer/Footer'
 
 
 
@@ -41,6 +42,7 @@ function App() {
       <Tarjeta/>
       </div>
 
+      <Footer/>
 
 
 
