@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Banner from './components/Banner'
 import Categoria from './components/Categoria'
 import Tarjeta from './components/Tarjeta'
+import Footer from './components/Footer/Footer'
 
 
 
@@ -49,6 +50,7 @@ function App() {
       <Tarjeta/>
       </div>
 
+      <Footer/>
 
 
 
