@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaHeart, FaSearch } from 'react-icons/fa';
 import { IoPersonOutline, IoCartOutline } from 'react-icons/io5'; // Utiliza 'react-icons/io' en lugar de 'react-icons/io5'
+import './Header.css'
 
 const Header = () => {
   return (

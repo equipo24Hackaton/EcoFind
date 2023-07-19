@@ -1,4 +1,5 @@
 import React from 'react'
+import './Tarjeta.css'
 
 import { IoPersonOutline, IoCartOutline,IoHeartOutline} from 'react-icons/io5';
 

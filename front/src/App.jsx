@@ -1,7 +1,7 @@
 import './App.css'
-import Header from './components/Header'
-import Banner from './components/Banner'
-import Tarjeta from './components/Tarjeta'
+import Header from './components/Header/Header'
+import Banner from './components/Banner/Banner'
+import Tarjeta from './components/Tarjeta/Tarjeta'
 import Footer from './components/Footer/Footer'
 
 
