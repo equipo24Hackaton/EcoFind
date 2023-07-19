@@ -1,0 +1,42 @@
+[
+  {
+    "image_url": "https://images.punkapi.com/v2/keg.png",
+    "_id": "64acfe1efebd5d00024c3364",
+    "name": "Producto1",
+    "description": "A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.",
+    "price": 75,
+    "created_by": "Usuario",
+    "date": "2023-07-11T07:00:46.766Z",
+    "__v": 0
+  },
+  {
+    "image_url": "https://images.punkapi.com/v2/beer2.png",
+    "_id": "64acfe1efebd5d00024c3365",
+    "name": "Producto2",
+    "description": "A rich and full-bodied stout with flavors of chocolate, coffee, and roasted malt.",
+    "price": 90,
+    "created_by": "Usuario",
+    "date": "2023-07-12T10:15:30.123Z",
+    "__v": 0
+  },
+  {
+    "image_url": "https://images.punkapi.com/v2/beer3.png",
+    "_id": "64acfe1efebd5d00024c3366",
+    "name": "Producto3",
+    "description": "A refreshing wheat beer with hints of citrus and a smooth, creamy finish.",
+    "price": 65,
+    "created_by": "Usuario",
+    "date": "2023-07-13T14:45:22.987Z",
+    "__v": 0
+  },
+  {
+    "image_url": "https://images.punkapi.com/v2/beer4.png",
+    "_id": "64acfe1efebd5d00024c3367",
+    "name": "Producto4",
+    "description": "An aromatic and fruity pale ale with notes of tropical hops and a balanced bitterness.",
+    "price": 80,
+    "created_by": "Usuario",
+    "date": "2023-07-14T18:20:55.531Z",
+    "__v": 0
+  }
+]
