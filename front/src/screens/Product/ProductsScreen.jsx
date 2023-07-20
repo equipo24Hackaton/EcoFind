@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { updateProductLikeStatus } from "../../services/ApiConection";
 import axios from "axios";
 
+import Chat from '../../components/chat/Chat'
+
 import Header from "../../components/Header/Header";
 import "../Product/ProductScreen.css";
 
@@ -75,6 +77,7 @@ export default function ProductsScreen() {
         ) : (
           <p>Cargando producto...</p>
         )}
+        <Chat/>
       </div>
     </>
   );

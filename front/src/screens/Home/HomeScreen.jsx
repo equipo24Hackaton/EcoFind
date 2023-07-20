@@ -7,6 +7,9 @@ import Banner from '../../components/Banner/Banner'; // Agrega la importación d
 // IMAGENES
 import img1 from '../../assets/images/Aceiterosa.jpg'
 
+import Chat from '../../components/chat/Chat'
+
+import firebaseConfig from '../../components/chat/Chat'
 
 
 const HomeScreen = ({ handleLike,  }) => {
@@ -28,7 +31,7 @@ const HomeScreen = ({ handleLike,  }) => {
         
       </div>
 
-      
+      <Chat firebaseConfig={firebaseConfig}/>
 
       
 
