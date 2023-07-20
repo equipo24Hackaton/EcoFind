@@ -59,7 +59,6 @@
   font-size: 3vh;
 }
 
-/* Hasta 600px */
 @media (max-width: 600px) {
   .grid-container {
     justify-content: center;
@@ -70,7 +69,6 @@
   }
 }
 
-/* De 601px a 900px */
 @media (min-width: 601px) and (max-width: 900px) {
   .grid-container {
     justify-content: center;
@@ -81,11 +79,10 @@
   }
 }
 
-/* Desde 901px */
 @media (min-width: 901px) {
   .grid-container {
     justify-content: center;
-    max-height: 120vh; /* Altura máxima para un máximo de 4 filas */
+    max-height: 120vh; 
   }
 
   .containerTarjeta {
@@ -93,11 +90,6 @@
   }
 }
 
-
-
-
-
-/* Estilos para el contenedor del input de búsqueda */
 .search-container {
   display: flex;
   align-items: center;
@@ -107,7 +99,6 @@
   margin-top: 20px;
 }
 
-/* Estilos para el input de búsqueda */
 .search-input {
   padding: 10px;
   border: 1px solid #ccc;
