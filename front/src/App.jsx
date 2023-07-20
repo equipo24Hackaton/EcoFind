@@ -1,62 +1,24 @@
-
-
-import './App.css'
-import Header from './components/Header/Header'
-import Banner from './components/Banner/Banner'
-import Tarjeta from './components/Tarjeta/Tarjeta'
-import Footer from './components/Footer/Footer'
-
-
-
-// FUENTES
-
-
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomeScreen from './screens/Home/HomeScreen';
+import ProductsScreen from './screens/Product/ProductsScreen';
+import { LikesProvider } from './components/NotificationBadge/LikesContext';
+import Modal from 'react-modal'; // Importa react-modal aquí
 
 function App() {
-  
+  // Asocia el elemento del DOM #root con react-modal
+  Modal.setAppElement('#root');
 
   return (
-    <>
-      
-      <Header/>
-      <Banner/>
-
-      <div className='tarjetas'>
-      <Tarjeta/>
-      <Tarjeta/>
-      </div>
-
-      <div className='tarjetas'>
-      <Tarjeta/>
-      <Tarjeta/>
-      </div>
-
-      <div className='tarjetas'>
-      <Tarjeta/>
-      <Tarjeta/>
-      </div>
-
-      <div className='tarjetas'>
-      <Tarjeta/>
-      <Tarjeta/>
-      </div>
-
-      <Footer/>
-
-
-
-
-
-
-
-
-
-
-
-
-     
-    </>
-  )
+    <BrowserRouter>
+      <LikesProvider>
+        <Routes>
+          <Route path="/" element={<HomeScreen />} />
+          <Route path="/products/*" element={<ProductsScreen />} />
+        </Routes>
+      </LikesProvider>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
