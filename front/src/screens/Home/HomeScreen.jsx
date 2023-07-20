@@ -6,12 +6,6 @@ import Banner from '../../components/Banner/Banner'; // Agrega la importación d
 
 // IMAGENES
 import img1 from '../../assets/images/Aceiterosa.jpg'
-import img2 from '../../assets/images/aceites.jpg'
-import img3 from '../../assets/images/cremaaguacate.jpg'
-import img4 from '../../assets/images/kitbano.jpg'
-import img5 from '../../assets/images/aceites.jpg'
-import img6 from '../../assets/images/cepilloseco.jpg'
-import img7 from '../../assets/images/velaartesanal.jpg'
 
 
 

@@ -97,4 +97,18 @@
 
 
 
+/* Estilos para el contenedor del input de búsqueda */
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Estilos para el input de búsqueda */
+.search-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+}
 

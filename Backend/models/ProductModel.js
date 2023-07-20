@@ -16,4 +16,12 @@ const productSchema = new Schema (
    {collection:'products'}
 )
 
+// Agregar función findByName al esquema
+productSchema.statics.findByName = async function (query) {
+   return this.find({ name: { $regex: query, $options: 'i' } });
+ };
+ 
+//  const ProductModel = mongoose.model('Product', productSchema);
+ 
+
 export default mongoose.model ('ProductModel',productSchema )

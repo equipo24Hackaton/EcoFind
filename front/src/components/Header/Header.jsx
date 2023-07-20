@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { FaSearch } from 'react-icons/fa';
-import { IoCartOutline, IoHeartOutline, IoHeart } from 'react-icons/io5';
+import { useState } from 'react';
+import { IoCartOutline } from 'react-icons/io5';
 import './Header.css';
 import NotificationBadge from '../NotificationBadge/NotificationBadge';
 import { useLikesContext } from '../NotificationBadge/LikesContext';
@@ -8,10 +7,9 @@ import ModalComponent from '../Modal/ModalComponent';
 import logo from '../../assets/images/logo-icon.png';
 
 
-import Search from '../Search/Search';
 
 const Header = () => {
-  const { likesCount, likedCards, handleLike, showNotification } =
+  const { likesCount, showNotification } =
     useLikesContext();
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -41,7 +39,6 @@ const Header = () => {
         <IoCartOutline className='icon' size={30} />
         {/* Icono de lupa de buscador */}
         
-        <Search/>
       </div>
     </div>
   );
