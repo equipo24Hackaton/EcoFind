@@ -14,7 +14,7 @@ function App() {
       <LikesProvider>
         <Routes>
           <Route path="/" element={<HomeScreen />} />
-          <Route path="/products/*" element={<ProductsScreen />} />
+          <Route path="/products/:productId" element={<ProductsScreen />} />
         </Routes>
       </LikesProvider>
     </BrowserRouter>

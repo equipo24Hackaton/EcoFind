@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 import { useLikesContext } from '../NotificationBadge/LikesContext';
 import Corazon from '../NotificationBadge/Corazon';
 import { fetchProducts } from '../../services/ApiConection';
+import { updateProductLikeStatus }  from '../../services/ApiConection';
 
 const Tarjeta = ({ cardId, linkto }) => {
   const { likedCards, handleLike } = useLikesContext();
-  const [liked, setLiked] = useState(likedCards[cardId] || false);
   const [products, setProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [cart, setCart] = useState([]); // Estado del carrito
@@ -19,21 +19,30 @@ const Tarjeta = ({ cardId, linkto }) => {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const productsData = await fetchProducts(searchQuery); // Pasamos el término de búsqueda a la función
+        const productsData = await fetchProducts(searchQuery);
         setProducts(productsData);
       } catch (error) {
         console.error(error.message);
       }
     };
 
-    // Llamar a la función para obtener los productos cuando searchQuery cambie
     getProducts();
   }, [searchQuery]);
 
-  const handleLikeClick = () => {
-    const newLiked = !liked;
-    setLiked(newLiked);
-    handleLike(cardId, newLiked);
+  const handleLikeClick = (productId) => {
+    const updatedProducts = products.map((product) =>
+      product.id === productId
+        ? { ...product, isFavorite: !product.isFavorite }
+        : product
+    );
+
+    setProducts(updatedProducts);
+
+    // Llamar a la función para actualizar el estado "favorite" del producto en el backend
+    updateProductLikeStatus(productId, !likedCards[productId]);
+
+    // Llamar a la función handleLike del contexto para actualizar el estado local de likedCards
+    handleLike(productId, !likedCards[productId]);
   };
 
   const addToCart = (product) => {
@@ -53,24 +62,25 @@ const Tarjeta = ({ cardId, linkto }) => {
         />
       </div>
 
-      <div className='flex-container'>
-        
+      <div className="flex-container">
         {/* Utilizar map para mostrar todos los productos */}
-        {products.map(product => (
-          <div className='containerTarjeta' key={product.id}>
-            
-            <img className='imgTarjeta' src={product.image_url} alt='Imagentarjeta' />
-            <div className='botonesTarjeta'>
-              <button className='prodName'>{product.name}</button>
-              <div className='botonesTarjeta2'>
-                <button className='price'>{product.price}</button>
-                <Corazon isLiked={liked} onClick={handleLikeClick} />
-      
+        {products.map((product) => (
+          <div className="containerTarjeta" key={product.id}>
+            <img className="imgTarjeta" src={product.image_url} alt="Imagentarjeta" />
+            <div className="botonesTarjeta">
+              <button className="prodName">{product.name}</button>
+              <div className="botonesTarjeta2">
+                <button className="price">{product.price}</button>
+                <Corazon
+                  isLiked={product.isFavorite}
+                  onClick={() => handleLikeClick(product.id)} // Pasar el id del producto
+                />
               </div>
               
             </div>
-            <Link style={{ textDecoration: 'none', color: 'white' }} to={linkto}>Ver Detalles</Link> <br/>
-            <button onClick={() => addToCart(product)}>Agregar al carrito</button> {/* Botón para agregar al carrito */}
+            <Link style={{ textDecoration: "none", color: "white" }} to={`/products/${product._id}`}>
+              Ver Detalles
+            </Link>
           </div>
         ))}
 
