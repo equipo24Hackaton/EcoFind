@@ -87,3 +87,21 @@ export const getSearchProduct = async (req, res) => {
      res.json({ message: error.message });
    }
  };
+
+//  Likes
+// Marcar o desmarcar un producto como favorito
+export const updateLikeStatus = async (req, res) => {
+   try {
+     const { id } = req.params;
+     const product = await ProductModel.findById(id);
+     if (!product) {
+       return res.status(404).json({ message: 'Producto no encontrado' });
+     }
+ 
+     product.like = !product.like;
+     await product.save();
+     res.status(200).json(product);
+   } catch (error) {
+     res.status(500).json({ message: 'Error al marcar/desmarcar el producto como favorito' });
+   }
+ };

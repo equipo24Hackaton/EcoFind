@@ -10,7 +10,8 @@ const productSchema = new Schema (
          ubication: {type:String},
          price: {type:Number},
          created_by: {type:String},
-         category: {type:Boolean}
+         category: {type:Boolean},
+         like:  { type: Boolean, default: false },
        },
    
    {collection:'products'}
