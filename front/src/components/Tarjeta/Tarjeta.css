@@ -1,14 +1,15 @@
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  grid-template-rows: repeat(auto-fill, minmax(150px, 1fr)); 
-  gap: 10px; 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px;
 }
 
 .containerTarjeta {
-  margin-left: 10px;
-  margin-top: 20px;
-  margin-right: 10px;
+  flex-basis: calc(50% - 15px);
+  max-width: 200px;
+  width: 100%;
   height: 30vh;
   border-radius: 10px;
   background-color: var(--color-card);
@@ -16,39 +17,84 @@
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
 }
 
-  .imgTarjeta{
-    width: 90%;
-    height: 50%;
-    border-radius: 10px;
-  }
-  
-  .botonesTarjeta{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-  }
-  .prodName{
-    width: 90;
-    height: 30px;
-    border-radius: 10px;
-    border: none;
-  }
-  .botonesTarjeta2{
-    margin-top: 5px;
-    display: flex;
-    justify-content: space-around;
-    
-  }
-  .price{
-    width: 130px;
-    border-radius: 10px;
-    border: none;
-    margin-right: 5px;
-    font-family: 'Manrope', sans-serif;
-    font-size: 20px;
+.imgTarjeta {
+  width: 90%;
+  height: 50%;
+  border-radius: 10px;
+  margin-top: 1vh;
+}
 
+.botonesTarjeta {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.prodName {
+  width: 90%;
+  height: 5vh;
+  border-radius: 10px;
+  border: none;
+  margin-top: 1vh;
+  margin-left: 1vh;
+}
+
+.botonesTarjeta2 {
+  margin-top: 2vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.price {
+  width: 12vh;
+  height: 5vh;
+  border-radius: 10px;
+  border: none;
+  margin-right: 5px;
+  margin-left: 1vh;
+  font-family: 'Manrope', sans-serif;
+  font-size: 3vh;
+}
+
+/* Hasta 600px */
+@media (max-width: 600px) {
+  .grid-container {
+    justify-content: center;
   }
+
+  .containerTarjeta {
+    flex-basis: calc(50% - 15px);
+  }
+}
+
+/* De 601px a 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+  .grid-container {
+    justify-content: center;
+  }
+
+  .containerTarjeta {
+    flex-basis: calc(33.33% - 15px);
+  }
+}
+
+/* Desde 901px */
+@media (min-width: 901px) {
+  .grid-container {
+    justify-content: center;
+    max-height: 120vh; /* Altura máxima para un máximo de 4 filas */
+  }
+
+  .containerTarjeta {
+    flex-basis: calc(25% - 15px);
+  }
+}
+
+
+
+
 
 

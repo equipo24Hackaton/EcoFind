@@ -32,7 +32,7 @@ const Tarjeta = ({ cardId, linkto }) => {
   };
 
   return (
-    <div className='grid-container'>
+    <div className='flex-container'>
       {/* Utilizar map para mostrar todos los productos */}
       {products.map(product => (
         <div className='containerTarjeta' key={product.id}>
@@ -40,13 +40,12 @@ const Tarjeta = ({ cardId, linkto }) => {
           <div className='botonesTarjeta'>
             <button className='prodName'>{product.name}</button>
             <div className='botonesTarjeta2'>
-              <button className='price'>{product.price}</button>
+              <button className='price'>{product.price + ' €'}</button>
               <Corazon isLiked={liked} onClick={handleLikeClick} />
             </div>
           </div>
           <Link style={{ textDecoration: 'none', color: 'white' }} to={linkto}>Ver Detalles</Link>
         </div>
-
       ))}
     </div>
   );
