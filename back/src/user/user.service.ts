@@ -1,13 +1,14 @@
 import { Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 // import { UpdateUserDto } from './dto/update-user.dto';
-import user from '../../data/user.json';
-import { User } from './entities/user.entity';
+// import user from '../../data/user.json';
+// import { User } from './entities/user.entity';
 import { UpdateUserDto } from './dto/update-user.dto';
+import { User } from './schemas/user.schema';
 
 @Injectable()
 export class UserService {
-  user: any;
+  users: any;
   _rndm(arr: any[]) {
     return Math.floor(Math.random() * arr.length);
   }
@@ -23,7 +24,7 @@ export class UserService {
     );
   }
 
-  private readonly product: User[] = user;
+  // private readonly product: User[] = this.user;
 
   create(createUserDto: CreateUserDto) {
     const id = this._idGenerator();
@@ -33,12 +34,12 @@ export class UserService {
       favoriteProducts: [],
     };
 
-    user.push(newUser);
-    return user.find((e) => e._id === id);
+    this.users.push(newUser);
+    return this.users.find((e) => e._id === id);
   }
 
   findAll() {
-    return user;
+    return this.users;
   }
 
   findOne(id: string) {

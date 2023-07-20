@@ -7,6 +7,7 @@ import {
   Patch,
   Post,
 } from '@nestjs/common';
+
 import { ProductsService } from './products.service';
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
@@ -39,4 +40,30 @@ export class ProductsController {
   remove(@Param('id') id: string) {
     return this.productsService.remove(id);
   }
+
+  // // Busquedas
+  // @Get()
+  // searchProducts(
+  //   @Query('description') description: string, // Búsqueda por características
+  //   @Query('text') searchText: string, // Búsqueda por texto libre
+  //   @Query('ubication') ubication: string, // Búsqueda por zona geográfica
+  // ) {
+  //   if (description) {
+  //     // Lógica para buscar productos por características
+  //     return this.productsService.searchByDescription(description);
+  //   }
+
+  //   if (searchText) {
+  //     // Lógica para buscar productos por texto libre
+  //     return this.productsService.searchByText(searchText);
+  //   }
+
+  //   if (ubication) {
+  //     // Lógica para buscar productos por zona geográfica
+  //     return this.productsService.searchByUbication(ubication);
+  //   }
+
+  //   // Si no se proporciona ningún parámetro de búsqueda válido, devuelve todos los productos
+  //   return this.productsService.findAll();
+  // }
 }
