@@ -32,7 +32,7 @@ const Tarjeta = ({ cardId, linkto }) => {
   };
 
   return (
-    <div>
+    <div className='grid-container'>
       {/* Utilizar map para mostrar todos los productos */}
       {products.map(product => (
         <div className='containerTarjeta' key={product.id}>
@@ -46,6 +46,7 @@ const Tarjeta = ({ cardId, linkto }) => {
           </div>
           <Link style={{ textDecoration: 'none', color: 'white' }} to={linkto}>Ver Detalles</Link>
         </div>
+
       ))}
     </div>
   );
