@@ -1,11 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Poppins:ital,wght@1,300&display=swap');
+ 
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
+
+
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --color-primary: #3FA34D;
+  --background: white;
+  --text: black;
+  --btn-color: #FFD639;
+  --btn2-color:#BFC540;
+  --color-card: rgb(63, 151, 151);
+  
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: black;
+  background-color: #fff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,6 +27,13 @@
   -webkit-text-size-adjust: 100%;
 }
 
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+}
+/*
 a {
   font-weight: 500;
   color: #646cff;
@@ -66,4 +86,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */

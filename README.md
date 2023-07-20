@@ -1,4 +1,3 @@
-# EcoFind
 El proyecto se basa en una tienda en línea dedicada a ofrecer productos naturales, orgánicos y artesanales, con un enfoque en el bienestar tanto de las personas como del medio ambiente. 
 Nos comprometemos a vender productos sostenibles y reciclados para contribuir a un mundo más eco-friendly.
 
