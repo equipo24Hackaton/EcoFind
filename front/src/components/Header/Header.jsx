@@ -5,6 +5,10 @@ import './Header.css';
 import NotificationBadge from '../NotificationBadge/NotificationBadge';
 import { useLikesContext } from '../NotificationBadge/LikesContext';
 import ModalComponent from '../Modal/ModalComponent';
+import logo from '../../assets/images/logo-icon.png';
+
+
+import Search from '../Search/Search';
 
 const Header = () => {
   const { likesCount, likedCards, handleLike, showNotification } =
@@ -23,7 +27,7 @@ const Header = () => {
     <div className='header'>
       <div className='logo'>
         {/* Aquí puedes colocar la imagen de tu logo */}
-        <img src='ruta-del-logo.png' alt='Logo' />
+        <img src={logo} alt="Logo" />
       </div>
       <div className='user-login'>
         {/* Aquí colocamos el botón de inicio de sesión con el ícono de usuario */}
@@ -39,6 +43,7 @@ const Header = () => {
         <FaSearch className='icon' size={24} />
         {/* Icono de la campana con corazón */}
         
+        <Search/>
       </div>
     </div>
   );

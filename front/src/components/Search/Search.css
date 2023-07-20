@@ -1,0 +1,35 @@
+
+.modal-overlay {
+    position: fixed;
+    top: 3%;
+    left: 43%;
+    width: 40%;
+    height:20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  .modal {
+    background-color:var(--background);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-content {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .modal-overlay {
+      top: 12%;
+      left: 76%;
+      width: 400px; /* Ajusta el ancho deseado para el modal en el escritorio */
+      height: 200px; /* Ajusta la altura deseada para el modal en el escritorio */
+      transform: translate(-50%, -50%);
+    }
+  }
+  /* Estilos adicionales para los botones y el input si es necesario */
+  
