@@ -2,6 +2,8 @@
   display: flex;
   width: 98%;
   justify-content: space-around; 
+  flex-wrap: wrap;
+  width: calc(25% , 20px);
 }
 
 .containerTarjeta {

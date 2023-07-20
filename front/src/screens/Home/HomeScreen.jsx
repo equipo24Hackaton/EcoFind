@@ -31,33 +31,10 @@ const HomeScreen = ({ handleLike,  }) => {
         productName={'Aceite Rosa'}
         
         />
-        <Tarjeta handleLike={handleLike}
-        imgCard={img2}
-        price={10.20 + ' €'}
-        productName={'Pack de Esencias'} />
+        
       </div>
 
-      <div className='tarjetas'>
-        <Tarjeta handleLike={handleLike}
-        imgCard={img3}
-        price={8.20 + ' €'}
-        productName={'Crema Hidratante Aguacate'} />
-        <Tarjeta handleLike={handleLike}
-        imgCard={img4}
-        price={17.50 + ' €'}
-        productName={'Kit de Baño'} />
-      </div>
-
-      <div className='tarjetas'>
-        <Tarjeta handleLike={handleLike} 
-        imgCard={img5}
-        price={5.20 + ' €'}
-        productName={'Cepillos Ecológicos X 3'} />
-        <Tarjeta handleLike={handleLike}
-        imgCard={img6}
-        price={7.90 + ' €'}
-        productName={'Velas Artesanales X 3'} />
-      </div>
+      
 
       
 
