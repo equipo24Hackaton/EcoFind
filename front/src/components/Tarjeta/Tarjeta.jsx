@@ -10,6 +10,7 @@ const Tarjeta = ({ cardId, linkto }) => {
   const [liked, setLiked] = useState(likedCards[cardId] || false);
   const [products, setProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [cart, setCart] = useState([]); // Estado del carrito
 
   const handleSearchQuery = (event) => {
     setSearchQuery(event.target.value);
@@ -35,6 +36,10 @@ const Tarjeta = ({ cardId, linkto }) => {
     handleLike(cardId, newLiked);
   };
 
+  const addToCart = (product) => {
+    setCart([...cart, product]); // Agregar el producto al carrito
+  };
+
   return (
     <section>
       {/* Input de búsqueda */}
@@ -46,27 +51,39 @@ const Tarjeta = ({ cardId, linkto }) => {
           placeholder="Buscar productos..."
           className="search-input"
         />
-       
       </div>
 
       <div className='flex-container'>
+        
         {/* Utilizar map para mostrar todos los productos */}
         {products.map(product => (
           <div className='containerTarjeta' key={product.id}>
+            
             <img className='imgTarjeta' src={product.image_url} alt='Imagentarjeta' />
             <div className='botonesTarjeta'>
               <button className='prodName'>{product.name}</button>
               <div className='botonesTarjeta2'>
                 <button className='price'>{product.price}</button>
                 <Corazon isLiked={liked} onClick={handleLikeClick} />
+      
               </div>
+              
             </div>
-            <Link style={{ textDecoration: 'none', color: 'white' }} to={linkto}>Ver Detalles</Link>
+            <Link style={{ textDecoration: 'none', color: 'white' }} to={linkto}>Ver Detalles</Link> <br/>
+            <button onClick={() => addToCart(product)}>Agregar al carrito</button> {/* Botón para agregar al carrito */}
           </div>
         ))}
+
+        
+      </div>
+
+      {/* Mostrar el número de productos en el carrito */}
+      <div>
+        <p>Productos en el carrito: {cart.length}</p>
       </div>
     </section>
   );
 };
 
 export default Tarjeta;
+

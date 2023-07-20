@@ -9,7 +9,7 @@ import img1 from '../../assets/images/Aceiterosa.jpg'
 
 
 
-const HomeScreen = ({ handleLike,  }) => {
+const HomeScreen = ({ handleLike, }) => {
   return (
     <>
       <Header />
@@ -18,19 +18,19 @@ const HomeScreen = ({ handleLike,  }) => {
       {/* Agrupa las instancias de Tarjeta en una sola sección */}
       <div className='tarjetas'>
         {/* Pasa las propiedades de handleLike y linkto correctamente */}
-        <Tarjeta linkto="/products/producto-1" handleLike={handleLike} 
-        
-        imgCard={img1}
-        price={6.10 + ' €'}
-        productName={'Aceite Rosa'}
-        
+        <Tarjeta linkto="/products/producto-1" handleLike={handleLike}
+
+          imgCard={img1}
+          price={6.10 + ' €'}
+          productName={'Aceite Rosa'}
+
         />
-        
+
       </div>
 
-      
 
-      
+
+
 
       <Footer />
     </>
