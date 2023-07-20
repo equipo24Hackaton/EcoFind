@@ -62,7 +62,7 @@ export default function ProductsScreen() {
             <div className="description">
               <div>
                 <h1 style={{ textAlign: "left" }}>{product.name}</h1>
-                <h2 style={{ textAlign: "left" }}>{product.price}</h2>
+                <h2 style={{ textAlign: "left" }}>{product.price + '€'}</h2>
                 <button className="btnCompra" onClick={handleLikeClick}>
                   {product.isFavorite ? "Quitar de favoritos" : "Agregar a favoritos"}
                 </button>
