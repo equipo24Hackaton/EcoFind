@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Tarjeta.css';
 import { Link } from 'react-router-dom';
 import { useLikesContext } from '../NotificationBadge/LikesContext';
@@ -49,7 +49,7 @@ const Tarjeta = ({ cardId, linkto }) => {
        
       </div>
 
-      <div className='grid-container'>
+      <div className='flex-container'>
         {/* Utilizar map para mostrar todos los productos */}
         {products.map(product => (
           <div className='containerTarjeta' key={product.id}>
