@@ -1,6 +1,7 @@
 //importamos el metodo
 import ProductModel from "../models/ProductModel.js";
 
+
 // Metodos para el CRUD
 
 //Mostrar todos los products
@@ -75,3 +76,14 @@ export const deleteProduct = async(req, res) => {
       res.json({message: error.message}) 
    }
 }
+
+// Buscar por palabra
+export const getSearchProduct = async (req, res) => {
+   try {
+     const query = req.params.name;
+     const products = await ProductModel.findByName(query);
+     res.status(200).json(products);
+   } catch (error) {
+     res.json({ message: error.message });
+   }
+ };
