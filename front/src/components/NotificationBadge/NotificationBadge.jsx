@@ -5,7 +5,7 @@ import './NotificationBadge.css';
 const NotificationBadge = ({ count, onClick }) => {
   return (
     <div onClick={onClick} className="notification-badge">
-      <IoNotificationsOutline className='icon' size={24} color="#000" />
+      <IoNotificationsOutline className='icon' size={30} color="#000" />
       {count > 0 && <span className="notification-count">{count}</span>}
     </div>
   );

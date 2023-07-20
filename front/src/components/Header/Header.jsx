@@ -38,10 +38,8 @@ const Header = () => {
         <ModalComponent isOpen={modalIsOpen} onClose={handleCloseModal} />
     
         {/* Icono de carrito de compras */}
-        <IoCartOutline className='icon' size={24} />
+        <IoCartOutline className='icon' size={30} />
         {/* Icono de lupa de buscador */}
-        <FaSearch className='icon' size={24} />
-        {/* Icono de la campana con corazón */}
         
         <Search/>
       </div>

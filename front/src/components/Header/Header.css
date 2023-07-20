@@ -23,29 +23,29 @@
   .icons {
     display: flex;
     justify-content: space-around;
-    gap: 20px;
+    gap: 5px;
     cursor: pointer;
    
   }
   
   .icon {
     padding: 8px;
-    background-color: #dcdcdc;
+    background-color: #fff;
     border-radius: 5px;
   }
-  .icono{
+  /* .icono{
     width: 20px;
     height: 20px;
     background-color: red;
     z-index: 99;
     border-radius: 50px;
     position: absolute;
-    margin-left: -25px;
+    margin-left: -30px;
     margin-top: -10px;
     color: white;
     align-items: center;
     text-align: center;
-  }
+  } */
   
   .icon:hover {
     background-color: #bebebe;

@@ -5,8 +5,8 @@
   
   .notification-count {
     position: absolute;
-    top: -6px; /* Ajusta la posición vertical según sea necesario */
-    right: -6px; /* Ajusta la posición horizontal según sea necesario */
+    top: 0px; /* Ajusta la posición vertical según sea necesario */
+    right: 3px; /* Ajusta la posición horizontal según sea necesario */
     display: flex;
     align-items: center;
     justify-content: center;

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { useLikesContext } from '../NotificationBadge/LikesContext';
 import Corazon from '../NotificationBadge/Corazon';
 
-const Tarjeta = ({ cardId, linkto }) => {
+const Tarjeta = ({ cardId, linkto, imgCard, price, productName }) => {
   const { likedCards, handleLike } = useLikesContext();
   const [liked, setLiked] = useState(likedCards[cardId] || false);
 
@@ -17,11 +17,11 @@ const Tarjeta = ({ cardId, linkto }) => {
 
   return (
     <div className='containerTarjeta'>
-      <img className='imgTarjeta' src={Aceiterosa} alt='Imagentarjeta' />
+      <img className='imgTarjeta' src={imgCard} alt='Imagentarjeta' />
       <div className='botonesTarjeta'>
-        <button className='prodName'>PRODUCT NAME</button>
+        <button className='prodName'>{productName}</button>
         <div className='botonesTarjeta2'>
-          <button className='price'>PRICE</button>
+          <button className='price'>{price}</button>
           <Corazon isLiked={liked} onClick={handleLikeClick} />
         </div>
       </div>

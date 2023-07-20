@@ -1,21 +1,23 @@
-.tarjetas{
-    display: flex;
-    justify-content: space-around;
-    gap: 10px;
-  }
-  
-  .containerTarjeta{
-    margin-top: 20px;
-    width: 50%;
-    height: 30vh;
-    border-radius: 10px;
-    background-color: rgb(35, 124, 124);
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-  
-  }
+.tarjetas {
+  display: flex;
+  width: 98%;
+  justify-content: space-around; 
+}
+
+.containerTarjeta {
+  margin-left: 10px;
+  margin-top: 20px;
+  width: 50%;
+  height: 30vh;
+  border-radius: 10px;
+  background-color: var(--color-card);
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+
   .imgTarjeta{
     width: 90%;
     height: 50%;
@@ -44,4 +46,37 @@
     border-radius: 10px;
     border: none;
     margin-right: 5px;
+  }
+
+
+   /* -------@ media------- */
+   @media (min-width: 480px) {
+    .containerTarjeta{
+      width: 40%;
+    }
+  }
+  @media (min-width: 600px) {
+    .containerTarjeta{
+      width: 40%;
+    }
+  }
+  @media (min-width: 768px) {
+    .containerTarjeta{
+      width: 23%;
+    }
+  }
+  @media (min-width: 900px) {
+    .containerTarjeta{
+      width: 20%;
+    }
+  }
+  @media (min-width: 1024px) {
+    .containerTarjeta{
+      width: 17%;
+    }
+  }
+  @media (min-width: 1200px) {
+    .containerTarjeta{
+      width: 14%;
+    }
   }

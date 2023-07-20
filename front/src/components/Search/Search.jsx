@@ -41,7 +41,7 @@ const Buscador = () => {
 
   return (
     <div>
-      <FaSearch className="icon" size={24} onClick={handleModalOpen} />
+      <FaSearch className="icon" size={30} onClick={handleModalOpen} />
 
       {isModalOpen && (
         <div className="modal-overlay">
