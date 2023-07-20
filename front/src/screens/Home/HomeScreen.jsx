@@ -6,6 +6,12 @@ import Banner from '../../components/Banner/Banner'; // Agrega la importación d
 
 // IMAGENES
 import img1 from '../../assets/images/Aceiterosa.jpg'
+import img2 from '../../assets/images/aceites.jpg'
+import img3 from '../../assets/images/cremaaguacate.jpg'
+import img4 from '../../assets/images/kitbano.jpg'
+import img5 from '../../assets/images/aceites.jpg'
+import img6 from '../../assets/images/cepilloseco.jpg'
+import img7 from '../../assets/images/velaartesanal.jpg'
 
 
 
@@ -21,25 +27,39 @@ const HomeScreen = ({ handleLike,  }) => {
         <Tarjeta linkto="/products/producto-1" handleLike={handleLike} 
         
         imgCard={img1}
+        price={6.10 + ' €'}
+        productName={'Aceite Rosa'}
         
         />
-        <Tarjeta handleLike={handleLike} />
+        <Tarjeta handleLike={handleLike}
+        imgCard={img2}
+        price={10.20 + ' €'}
+        productName={'Pack de Esencias'} />
       </div>
 
       <div className='tarjetas'>
-        <Tarjeta handleLike={handleLike} />
-        <Tarjeta handleLike={handleLike} />
+        <Tarjeta handleLike={handleLike}
+        imgCard={img3}
+        price={8.20 + ' €'}
+        productName={'Crema Hidratante Aguacate'} />
+        <Tarjeta handleLike={handleLike}
+        imgCard={img4}
+        price={17.50 + ' €'}
+        productName={'Kit de Baño'} />
       </div>
 
       <div className='tarjetas'>
-        <Tarjeta handleLike={handleLike} />
-        <Tarjeta handleLike={handleLike} />
+        <Tarjeta handleLike={handleLike} 
+        imgCard={img5}
+        price={5.20 + ' €'}
+        productName={'Cepillos Ecológicos X 3'} />
+        <Tarjeta handleLike={handleLike}
+        imgCard={img6}
+        price={7.90 + ' €'}
+        productName={'Velas Artesanales X 3'} />
       </div>
 
-      <div className='tarjetas'>
-        <Tarjeta handleLike={handleLike} />
-        <Tarjeta handleLike={handleLike} />
-      </div>
+      
 
       <Footer />
     </>

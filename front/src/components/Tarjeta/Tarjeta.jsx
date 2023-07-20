@@ -19,9 +19,9 @@ const Tarjeta = ({ cardId, linkto, imgCard, price, productName }) => {
     <div className='containerTarjeta'>
       <img className='imgTarjeta' src={imgCard} alt='Imagentarjeta' />
       <div className='botonesTarjeta'>
-        <button className='prodName'>{productName}</button>
+        <button  className='prodName'>{productName}</button>
         <div className='botonesTarjeta2'>
-          <button className='price'>{price}</button>
+          <button  className='price'>{price}</button>
           <Corazon isLiked={liked} onClick={handleLikeClick} />
         </div>
       </div>
