@@ -1,0 +1,93 @@
+.header {
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center; /* Centra verticalmente los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se colapsen en varias filas */
+  }
+  
+  .userLogin {
+    display: flex;
+    align-items: center; /* Centra verticalmente el texto del botón */
+    height: 40px;
+    padding:  10px; /* Ajusta el espaciado interno del botón */
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    background-color: #dcdcdc;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .icons {
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+    cursor: pointer;
+   
+  }
+  
+  .icon {
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  /* .icono{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    z-index: 99;
+    border-radius: 50px;
+    position: absolute;
+    margin-left: -30px;
+    margin-top: -10px;
+    color: white;
+    align-items: center;
+    text-align: center;
+  } */
+  
+  .icon:hover {
+    background-color: #bebebe;
+  }
+  
+  /* Media Query para hacer el header responsive */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: row; /* Coloca los elementos uno debajo del otro */
+      
+    }
+  
+    .userLogin {
+      width: 100%; /* Ocupa todo el ancho disponible */
+      width: 150px;
+      align-self: flex-end;
+    }
+  
+    .icons {
+      justify-content: center; /* Centra los iconos en la versión móvil */
+    }
+  }
+
+  /* .notification-icon {
+    position: relative;
+  }
+  
+  .notification-dot {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 12px;
+    height: 12px;
+    background-color: red;
+    border-radius: 50%;
+  }
+  
+  .likes-count {
+    position: absolute;
+    top: -3px;
+    right: -8px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+  } */

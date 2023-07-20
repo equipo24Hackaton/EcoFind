@@ -1,0 +1,20 @@
+.notification-badge {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .notification-count {
+    position: absolute;
+    top: 0px; /* Ajusta la posición vertical según sea necesario */
+    right: 3px; /* Ajusta la posición horizontal según sea necesario */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: #f00;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 50%;
+  }
+  
