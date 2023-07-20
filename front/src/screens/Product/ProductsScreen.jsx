@@ -1,50 +1,57 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import Header from '../../components/Header/Header';
+import { fetchProducts } from '../../services/ApiConection';
 
-import '../Product/ProductScreen.css'
+import '../Product/ProductScreen.css';
 
 export default function ProductsScreen() {
+  const [product, setProduct] = useState(null);
+
+  useEffect(() => {
+    // Function to fetch products from the API
+    const fetchData = async () => {
+      try {
+        const data = await fetchProducts('');
+        // Assuming the API returns an array of products, you can set the first product here
+        if (data && data.length > 0) {
+          setProduct(data[0]);
+        }
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    };
+
+    fetchData(); // Call the fetchData function
+  }, []);
+
+  // If the product data is still being fetched, you can display a loading message
+  if (!product) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <>
-    <Header/>
-    <div className='container'>
+      <Header />
+      <div className='container'>
+        <div>
+          <div className='imagenProducto'>
+            <img className='imgProducto' src={product.image_url} alt='imagenProducto'></img>
+          </div>
 
-
-    <div>
-    <div className='imagenProducto'>
-      <img className='imgProducto' src="https://previews.123rf.com/images/vladvm/vladvm1511/vladvm151100280/47689894-el-%C3%ADcono-de-producto-org%C3%A1nico-eco-y-bio-s%C3%ADmbolo-de-ecolog%C3%ADa-ilustraci%C3%B3n-de-vector-plano.jpg" alt='imagenProducto'></img>
-    </div>
-
-
-    <div className='description'>
-      <div>
-        {/* NOMBRE */}
-
-    <h1 style={{textAlign: 'left'}}>Product Name</h1>
-    <h2 style={{textAlign:'left'}}>Price</h2>
-    <button className='btnCompra'>Comprar</button>
-    <div className='carrousel'>
-      <div className='raya'/>
-      <div className='raya'/>
-      <div className='raya'/>
-    </div>
-    <div className='textDescription'>
-      <h3 style={{maxWidth:'250px'}}>Lorem ipsum lala lala vamos a ganar, lo lo lo somos lo mejor!</h3>
-    </div>
+          <div className='description'>
+            <div>
+              {/* NOMBRE */}
+              <h1 style={{ textAlign: 'left' }}>{product.name}</h1>
+              <h2 style={{ textAlign: 'left' }}>{product.price}</h2>
+              <button className='btnCompra'>Comprar</button>
+              <div className='textDescription'>
+                <h3 style={{ maxWidth: '250px' }}>{product.description}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-
-    </div>
-
-      </div>
-    
-    
-    
-    
-    
-    
-    
-    
     </>
-  )
+  );
 }
+
