@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Tarjeta.css';
 import { Link } from 'react-router-dom';
 import { useLikesContext } from '../NotificationBadge/LikesContext';
@@ -36,24 +36,6 @@ const Tarjeta = ({ cardId, linkto }) => {
   };
 
   return (
-<<<<<<< HEAD
-    <div className='flex-container'>
-      {/* Utilizar map para mostrar todos los productos */}
-      {products.map(product => (
-        <div className='containerTarjeta' key={product.id}>
-          <img className='imgTarjeta' src={product.image_url} alt='Imagentarjeta' />
-          <div className='botonesTarjeta'>
-            <button className='prodName'>{product.name}</button>
-            <div className='botonesTarjeta2'>
-              <button className='price'>{product.price + ' €'}</button>
-              <Corazon isLiked={liked} onClick={handleLikeClick} />
-            </div>
-          </div>
-          <Link style={{ textDecoration: 'none', color: 'white' }} to={linkto}>Ver Detalles</Link>
-        </div>
-      ))}
-    </div>
-=======
     <section>
       {/* Input de búsqueda */}
       <div className="search-container">
@@ -67,7 +49,7 @@ const Tarjeta = ({ cardId, linkto }) => {
        
       </div>
 
-      <div className='grid-container'>
+      <div className='flex-container'>
         {/* Utilizar map para mostrar todos los productos */}
         {products.map(product => (
           <div className='containerTarjeta' key={product.id}>
@@ -84,7 +66,6 @@ const Tarjeta = ({ cardId, linkto }) => {
         ))}
       </div>
     </section>
->>>>>>> e1efd6416085da18a47dc19166a5bb5cf2a4949d
   );
 };
 
