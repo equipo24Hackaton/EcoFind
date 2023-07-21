@@ -5,6 +5,7 @@ import NotificationBadge from '../NotificationBadge/NotificationBadge';
 import { useLikesContext } from '../NotificationBadge/LikesContext';
 import ModalComponent from '../Modal/ModalComponent';
 import logo from '../../assets/images/logo-icon.png';
+import { Link } from 'react-router-dom';
 
 
 
@@ -25,7 +26,9 @@ const Header = () => {
     <div className='header'>
       <div className='logo'>
         {/* Aquí puedes colocar la imagen de tu logo */}
+        <Link to={"/"} >
         <img src={logo} alt="Logo" />
+        </Link>
       </div>
       <div className='user-login'>
         {/* Aquí colocamos el botón de inicio de sesión con el ícono de usuario */}
