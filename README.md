@@ -24,6 +24,7 @@ Además, facilitamos la comunicación y atención al cliente, permitiendo que pu
 ## Instalación:
 
 Para instalar el proyecto, debe clonar el repositorio con el siguiente enlace: https://github.com/equipo24Hackaton/EcoFind.git
+
 Para iniciar el proyecto, escribe en la terminal:
 - npm i
   
