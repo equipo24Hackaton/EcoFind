@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { updateProductLikeStatus } from "../../services/ApiConection";
 import axios from "axios";
+import { Link } from 'react-router-dom';
+
+import { AiOutlineArrowLeft } from 'react-icons/ai';
 
 import Chat from '../../components/chat/Chat'
 
@@ -54,6 +57,9 @@ export default function ProductsScreen() {
   return (
     <>
       <Header />
+      <Link className="btnAtras" to={`/`}>
+            Volver
+            </Link>
       <div className="container">
         {product ? ( // Verificar si el producto existe antes de mostrar sus detalles
           <div>

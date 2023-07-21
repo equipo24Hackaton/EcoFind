@@ -1,15 +1,9 @@
 
 
 /* Estilos para el contenedor principal del chat */
-.chat-container {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    background-color: #f7f7f7;
-  }
+.chat-container{
+  position: absolute;
+}
   
   /* Estilos para los mensajes */
   .chat-messages {
@@ -85,7 +79,7 @@
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
-    z-index: 9999; /* Asegura que el botón esté por encima de otros elementos */
+    z-index: 9999; 
   }
   
   .chat-button:hover {

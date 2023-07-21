@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { IoCartOutline } from 'react-icons/io5';
 import './Header.css';
 import NotificationBadge from '../NotificationBadge/NotificationBadge';
@@ -36,7 +36,7 @@ const Header = () => {
         <ModalComponent isOpen={modalIsOpen} onClose={handleCloseModal} />
     
         {/* Icono de carrito de compras */}
-        <IoCartOutline className='icon' size={30} />
+        <IoCartOutline className='icon' size={30} data-testid="cart-icon"/>
         {/* Icono de lupa de buscador */}
         
       </div>
