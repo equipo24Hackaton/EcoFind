@@ -1,3 +1,5 @@
+# EcoFind
+
 El proyecto se basa en una tienda en línea dedicada a ofrecer productos naturales, orgánicos y artesanales, con un enfoque en el bienestar tanto de las personas como del medio ambiente. 
 Nos comprometemos a vender productos sostenibles y reciclados para contribuir a un mundo más eco-friendly.
 
@@ -21,11 +23,11 @@ Además, facilitamos la comunicación y atención al cliente, permitiendo que pu
 
 ## Instalación:
 
-Para instalar el proyecto, debe clonar el repositorio con el siguiente enlace:[ https://github.com/SakuraTarot/sakura-tarot](https://github.com/equipo24Hackaton/EcoFind.git)
-
+Para instalar el proyecto, debe clonar el repositorio con el siguiente enlace: https://github.com/equipo24Hackaton/EcoFind.git
 Para iniciar el proyecto, escribe en la terminal:
 - npm i
-Para correr el programa;
+  
+Para correr el programa:
 - npm run dev
 
 ---
